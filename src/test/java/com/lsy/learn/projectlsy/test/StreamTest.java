@@ -43,7 +43,7 @@ class StreamTest {
     void stream() {
         List<EmployeeSnapshot> employeeSnapshots = employeeList.stream()
                 .filter(e -> e.getAge() > 25)
-                .sorted((o1, o2) -> o1.getAge() > o2.getAge() ? 1 : -1)
+                .sorted((o1, o2) -> o2.getAge() - o1.getAge())
                 .collect(Collectors.toList());
         employeeSnapshots.forEach(employeeSnapshot -> {
             System.out.println(employeeSnapshot.getId() + " " + employeeSnapshot.getName() + " " + employeeSnapshot.getAge());
@@ -115,9 +115,18 @@ class StreamTest {
          * join连接
          */
 
-        String str = mapList.stream().map(e -> e.get("num")).collect(Collectors.joining(",","start: "," :end"));
-        System.out.println(str);
+//        String str = mapList.stream().map(e -> e.get("num")).collect(Collectors.joining(",","start: "," :end"));
+//        System.out.println(str);
 
+        boolean all = employeeList.stream().allMatch(user -> user.getAge() > 25);
+        System.out.println(all);
+        boolean any = employeeList.stream().anyMatch(user -> user.getAge() > 25);
+        System.out.println(any);
+        boolean noneMatch = employeeList.stream().noneMatch(user -> user.getAge() > 25);
+        System.out.println(noneMatch);
+
+        Optional<EmployeeSnapshot> employeeSnapshot = employeeList.stream().sorted((o1, o2) -> o2.getAge() - o1.getAge()).findFirst();
+        System.out.println(employeeSnapshot.get().getName());
     }
 
 
