@@ -6,14 +6,23 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.ImportSelector;
+import org.springframework.core.type.AnnotationMetadata;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
+import org.springframework.stereotype.Component;
 
-@Configuration
+//@Configuration
 //@EnableTransactionManagement
 @ComponentScan
+@Configuration
 class ApplicationConfig {
+
+
+    public static void main(String[] args) {
+        System.out.println(150125 % 69999);
+    }
 
 //    @Value("${spring.datasource.url}")
 //    private String url;

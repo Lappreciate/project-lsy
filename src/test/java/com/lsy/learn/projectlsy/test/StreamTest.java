@@ -126,6 +126,7 @@ class StreamTest {
         System.out.println(noneMatch);
 
         Optional<EmployeeSnapshot> employeeSnapshot = employeeList.stream().sorted((o1, o2) -> o2.getAge() - o1.getAge()).findFirst();
+
         System.out.println(employeeSnapshot.get().getName());
     }
 
