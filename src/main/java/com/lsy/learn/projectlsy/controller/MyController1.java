@@ -41,8 +41,9 @@ public class MyController1 implements ApplicationContextAware {
     }
 
 
-    public static class A{
-
+    public static class A {
+        private int a;
+        private String B;
     }
 
 }
