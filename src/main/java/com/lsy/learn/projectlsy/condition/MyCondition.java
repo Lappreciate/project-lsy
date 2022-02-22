@@ -3,14 +3,9 @@ package com.lsy.learn.projectlsy.condition;
 import org.springframework.boot.autoconfigure.condition.ConditionOutcome;
 import org.springframework.boot.autoconfigure.condition.SpringBootCondition;
 import org.springframework.context.annotation.ConditionContext;
-import org.springframework.core.annotation.MergedAnnotations;
 import org.springframework.core.type.AnnotatedTypeMetadata;
-import org.springframework.stereotype.Service;
 
-import java.lang.annotation.Annotation;
-import java.util.List;
 import java.util.Map;
-import java.util.stream.Collectors;
 
 public class MyCondition extends SpringBootCondition {
     @Override
