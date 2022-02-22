@@ -6,7 +6,7 @@ import java.util.Map;
 
 public class Test1 {
     public static void main(String[] args) {
-        System.out.println("---" + rewardConfig);
+        System.out.println("---  " + rewardConfig);
     }
 
 
