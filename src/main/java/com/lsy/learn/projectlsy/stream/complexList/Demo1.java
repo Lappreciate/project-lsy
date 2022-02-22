@@ -50,7 +50,7 @@ public class Demo1 {
             System.out.println(next.getKey() + ":" + next.getValue());
         }
 
-        System.out.println("=====================");
+        System.out.println("=========     ============");
 
         Map<String, Map<String, List<Person>>> collect = personList.stream().collect(Collectors.groupingBy(Person::getName, Collectors.groupingBy(person -> {
             if (person.getAge() > 5) {
