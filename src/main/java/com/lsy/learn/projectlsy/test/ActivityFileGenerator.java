@@ -59,6 +59,8 @@ public class ActivityFileGenerator {
         replaceFileStr(
                 TEMPLATE_ABSOLUTE_PATH + "scheduleTemplate.txt",
                 "/Users/yanhui/IdeaProjects/mico-activity/schedule/src/main/java/com/mico/schedule/activity/activity_" + map.get("directoryDate") + "/", map.get("className") + "Schedule" + ".java");
+
+
     }
 
 
@@ -76,7 +78,7 @@ public class ActivityFileGenerator {
 
             }
             content = content.replace("[" + res + "]", map.get(res));
-            System.out.println(content);
+//            System.out.println(content);
 
         }
         return content;
