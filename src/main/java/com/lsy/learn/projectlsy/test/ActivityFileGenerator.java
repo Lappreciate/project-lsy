@@ -15,36 +15,36 @@ public class ActivityFileGenerator {
 
     static {
         map.put("activityId", "222");
-        map.put("className", "AaaBbC");
+        map.put("className", "HallOfFameOfMonth");
         map.put("activityName", "aaa_bb_c");
-        map.put("serviceVariableName", "aaaBbC");
-        map.put("controllerUrl", "/aaa/bb/c");
-        map.put("openArea", "me,tr,th");
-        map.put("directoryDate", "202205");//conventional
+        map.put("serviceVariableName", "hallOfFameOfMonth");
+        map.put("controllerUrl", "/hall/of/fame/of/month");
+        map.put("openArea", "vn");
+        map.put("directoryDate", "conventional");//conventional
     }
 
     public static void main(String[] args) {
 
-        /**
-         * configs文件生成
-         */
-        replaceFileStr(
-                TEMPLATE_ABSOLUTE_PATH + "configTemplate.txt",
-                ABSOLUTE_PATH + "operation/common/activity_" + map.get("directoryDate") + "/",
-                map.get("className") + "Configs" + ".java");
-        /**
-         * interfaceImpl生成
-         */
-        replaceFileStr(
-                TEMPLATE_ABSOLUTE_PATH + "serviceTemplate.txt",
-                ABSOLUTE_PATH + "operation/service/activity_" + map.get("directoryDate") + "/", map.get("className") + "Service" + ".java");
-
-        /**
-         * interface实现文件生成
-         */
-        replaceFileStr(
-                TEMPLATE_ABSOLUTE_PATH + "serviceImplTemplate.txt",
-                ABSOLUTE_PATH + "operation/service/impl/activity_" + map.get("directoryDate") + "/", map.get("className") + "ServiceImpl" + ".java");
+//        /**
+//         * configs文件生成
+//         */
+//        replaceFileStr(
+//                TEMPLATE_ABSOLUTE_PATH + "configTemplate.txt",
+//                ABSOLUTE_PATH + "operation/common/activity_" + map.get("directoryDate") + "/",
+//                map.get("className") + "Configs" + ".java");
+//        /**
+//         * interfaceImpl生成
+//         */
+//        replaceFileStr(
+//                TEMPLATE_ABSOLUTE_PATH + "serviceTemplate.txt",
+//                ABSOLUTE_PATH + "operation/service/activity_" + map.get("directoryDate") + "/", map.get("className") + "Service" + ".java");
+//
+//        /**
+//         * interface实现文件生成
+//         */
+//        replaceFileStr(
+//                TEMPLATE_ABSOLUTE_PATH + "serviceImplTemplate.txt",
+//                ABSOLUTE_PATH + "operation/service/impl/activity_" + map.get("directoryDate") + "/", map.get("className") + "ServiceImpl" + ".java");
 
         /**
          * controller文件生成
@@ -53,12 +53,12 @@ public class ActivityFileGenerator {
                 TEMPLATE_ABSOLUTE_PATH + "controllerTemplate.txt",
                 "/Users/yanhui/IdeaProjects/mico-activity/api/src/main/java/com/mico/api/activity/resources/activity_" + map.get("directoryDate") + "/", map.get("className") + "Resource" + ".java");
 
-        /**
-         * schedule文件生成
-         */
-        replaceFileStr(
-                TEMPLATE_ABSOLUTE_PATH + "scheduleTemplate.txt",
-                "/Users/yanhui/IdeaProjects/mico-activity/schedule/src/main/java/com/mico/schedule/activity/activity_" + map.get("directoryDate") + "/", map.get("className") + "Schedule" + ".java");
+//        /**
+//         * schedule文件生成
+//         */
+//        replaceFileStr(
+//                TEMPLATE_ABSOLUTE_PATH + "scheduleTemplate.txt",
+//                "/Users/yanhui/IdeaProjects/mico-activity/schedule/src/main/java/com/mico/schedule/activity/activity_" + map.get("directoryDate") + "/", map.get("className") + "Schedule" + ".java");
 
 
     }
