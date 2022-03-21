@@ -37,28 +37,32 @@ public class ActivityFileGenerator {
          */
         generateFile(
                 TEMPLATE_ABSOLUTE_PATH + "serviceTemplate.txt",
-                ABSOLUTE_PATH + "operation/service/activity_" + map.get("directoryDate") + "/", map.get("className") + "Service" + ".java");
+                ABSOLUTE_PATH + "operation/service/activity_" + map.get("directoryDate") + "/",
+                map.get("className") + "Service" + ".java");
 
         /**
          * interface实现文件生成
          */
         generateFile(
                 TEMPLATE_ABSOLUTE_PATH + "serviceImplTemplate.txt",
-                ABSOLUTE_PATH + "operation/service/impl/activity_" + map.get("directoryDate") + "/", map.get("className") + "ServiceImpl" + ".java");
+                ABSOLUTE_PATH + "operation/service/impl/activity_" + map.get("directoryDate") + "/",
+                map.get("className") + "ServiceImpl" + ".java");
 
         /**
          * controller文件生成
          */
         generateFile(
                 TEMPLATE_ABSOLUTE_PATH + "controllerTemplate.txt",
-                "/Users/yanhui/IdeaProjects/mico-activity/api/src/main/java/com/mico/api/activity/resources/activity_" + map.get("directoryDate") + "/", map.get("className") + "Resource" + ".java");
+                "/Users/yanhui/IdeaProjects/mico-activity/api/src/main/java/com/mico/api/activity/resources/activity_" + map.get("directoryDate") + "/",
+                map.get("className") + "Resource" + ".java");
 
         /**
          * schedule文件生成
          */
         generateFile(
                 TEMPLATE_ABSOLUTE_PATH + "scheduleTemplate.txt",
-                "/Users/yanhui/IdeaProjects/mico-activity/schedule/src/main/java/com/mico/schedule/activity/activity_" + map.get("directoryDate") + "/", map.get("className") + "Schedule" + ".java");
+                "/Users/yanhui/IdeaProjects/mico-activity/schedule/src/main/java/com/mico/schedule/activity/activity_" + map.get("directoryDate") + "/",
+                map.get("className") + "Schedule" + ".java");
 
 
     }
