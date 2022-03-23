@@ -1,9 +1,13 @@
 spring:
   datasource:
-    url:jdbc:mysql://localhost:3306/test1?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+    url: jdbc:mysql://localhost:3306/test1?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
   username: root
   password: 1234
   driver-class-name: com.mysql.cj.jdbc.Driver
 config:
   environment: test
 testValue: testValue
+
+grpc:
+  server:
+    port: 10000
