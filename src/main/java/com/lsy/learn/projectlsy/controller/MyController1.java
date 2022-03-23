@@ -3,6 +3,7 @@ package com.lsy.learn.projectlsy.controller;
 import com.lsy.learn.projectlsy.config.SunConfigs;
 import com.lsy.learn.projectlsy.config.TotalConfigs;
 import com.lsy.learn.projectlsy.designModel.PersonAbs;
+import com.lsy.learn.projectlsy.grpcServer.service.GrpcInterfaceTest;
 import com.lsy.learn.projectlsy.service.TestService;
 import com.lsy.learn.projectlsy.test.SupplierTest.Test;
 import lombok.extern.slf4j.Slf4j;
@@ -22,17 +23,21 @@ import org.springframework.web.bind.annotation.RestController;
 public class MyController1 implements ApplicationContextAware {
 
 
-    @Autowired
-    private SunConfigs sunConfigs;
+
     @Autowired
     private TestService testService;
 
-
     private ApplicationContext applicationContext;
+
+
+
+    @Autowired
+    private GrpcInterfaceTest grpcInterfaceTest;
 
     @RequestMapping("/configTest")
     public void func1() {
-        testService.printMethod();
+        grpcInterfaceTest.test();
+        log.info("bbbb");
     }
 
     @Override
