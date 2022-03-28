@@ -34,6 +34,7 @@ public class MyController1 implements ApplicationContextAware {
 
     @RequestMapping("/configTest")
     public void func1() {
+        //grpc调用端
         log.info("res:{}", testServiceGrpcClient.getGrpcTest());
         log.info("bbbb");
     }

@@ -1,4 +1,4 @@
-package com.lsy.learn.projectlsy.test;
+package com.lsy.learn.projectlsy;
 
 import java.io.*;
 import java.util.HashMap;
@@ -14,12 +14,12 @@ public class ActivityFileGenerator {
     public static final String ABSOLUTE_PATH = "/Users/yanhui/IdeaProjects/mico-activity/operation/src/main/java/com/mico/";
 
     static {
-        map.put("activityId", "222");
-        map.put("className", "HallOfFameOfMonth");
-        map.put("activityName", "aaa_bb_c");
-        map.put("serviceVariableName", "hallOfFameOfMonth");
-        map.put("controllerUrl", "/hall/of/fame/of/month");
-        map.put("openArea", "vn");
+        map.put("activityId", "10453");//新主播月榜
+        map.put("className", "NewAnchorMonthlyList2022");
+        map.put("activityName", "new_anchor_monthly_list_2022");
+        map.put("serviceVariableName", "newAnchorMonthlyList2022");
+        map.put("controllerUrl", "new/anchor/monthly/list/2022");
+        map.put("openArea", "kh");
         map.put("directoryDate", "conventional");//conventional || 2022_04
     }
 
