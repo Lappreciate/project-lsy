@@ -14,12 +14,12 @@ public class ActivityFileGenerator {
     public static final String ABSOLUTE_PATH = "/Users/yanhui/IdeaProjects/mico-activity/operation/src/main/java/com/mico/";
 
     static {
-        map.put("activityId", "10473");//开斋节
-        map.put("className", "LasserBairam2022");
-        map.put("activityName", "lasser_bairam_2022");
-        map.put("serviceVariableName", "lasserBairam2022");
-        map.put("controllerUrl", "/lasser/bairam/2022");
-        map.put("openArea", "me,tr");
+        map.put("activityId", "10479");//爱情魔法阵
+        map.put("className", "TravelNotes2022");
+        map.put("activityName", "travel_notes_2022");
+        map.put("serviceVariableName", "travelNotes2022");
+        map.put("controllerUrl", "travel/notes/2022");
+        map.put("openArea", "th,id,my");
         map.put("directoryDate", "202205");//conventional || 2022_04
     }
 
