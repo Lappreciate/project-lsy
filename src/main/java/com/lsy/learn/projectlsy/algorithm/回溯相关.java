@@ -1,6 +1,5 @@
 package com.lsy.learn.projectlsy.algorithm;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -8,10 +7,10 @@ import java.util.List;
  * @author Yanhuidsdsdsdsdsd
  * @date 2021/3/8 15:55
  */
-public class Permute {
+public class 回溯相关 {
 
     public static void main(String[] args) {
-        new Permute().permute(new int[]{1, 2, 3});
+        new 回溯相关().permute(new int[]{1, 2, 3});
     }
 
     private void permute(int[] nums) {
