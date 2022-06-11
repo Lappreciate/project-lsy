@@ -9,40 +9,52 @@ public class 字符串的排列 {
     List<String> res = new ArrayList<>();
 
     public static void main(String[] args) {
-
-        String s = "aab";
+        String s = "suvyls";
         System.out.println(Arrays.toString(new 字符串的排列().permutation(s)));
     }
 
     public String[] permutation(String s) {
+        boolean[] visit = new boolean[s.length()];
 
         List<Character> list = new ArrayList<>();
-        dfs(s, list);
-        String[] s1 = new String[res.size()];
-        for (int i = 0; i < res.size(); i++) {
-            s1[i] = res.get(i);
-        }
-        return s1;
+        dfs(transfer(s), list, visit);
+        System.out.println(res.size());
+        return res.toArray(new String[0]);
     }
 
 
-    private void dfs(String s, List<Character> list) {
-        if (list.size() == s.length()) {
-            String transfer = transfer(list);
-//            if(!res.contains(transfer)){
-                res.add(transfer(list));
-//            }
+    private char[] transfer(String s) {
+        char[] tmp = new char[s.length()];
+        for (int i = 0; i < s.length(); i++) {
+            tmp[i] = s.charAt(i);
+        }
+        Arrays.sort(tmp);
+        return tmp;
+    }
+
+
+    private void dfs(char[] s, List<Character> list, boolean[] visit) {
+        if (list.size() == s.length) {
+            res.add(transfer(list));
             return;
         }
 
-        for (int i = 0; i < s.length(); i++) {
-//            if (list.contains(s.charAt(i))) {
-//                continue;
-//            }
+        for (int i = 0; i < s.length; i++) {
 
-            list.add(s.charAt(i));
-            dfs(s, list);
+            if (visit[i]) {
+                continue;
+            }
+
+            if (i < s.length - 1 && s[i] == s[i + 1] && visit[i + 1]) {
+                continue;
+            }
+
+            visit[i] = true;
+            list.add(s[i]);
+            dfs(s, list, visit);
             list.remove(list.size() - 1);
+            visit[i] = false;
+
         }
     }
 
